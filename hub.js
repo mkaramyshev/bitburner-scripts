@@ -41,7 +41,7 @@ export async function main(ns) {
 			worthy.push(pwnedHosts[i])
 		}
 	}
-	var threadsPerHost = (ns.getServerMaxRam(ns.getHostname()) / worthy.length)
+	var threadsPerHost = (ns.getServerMaxRam(ns.getHostname()) / worthyHosts.length)
 	threadsPerHost = threadsPerHost/2
 	function smartHack(h) {
 		if (ns.getServerMaxRam(ns.getHostname()) - ns.getServerUsedRam(ns.getHostname()) > 3) {
